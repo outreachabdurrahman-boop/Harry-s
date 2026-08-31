@@ -1,0 +1,7 @@
+{
+  "name": "Harry's Restaurant",
+  "description": "Modern and elegant restaurant website for Harry's in F-10 Markaz, Islamabad, featuring menu, gallery, experience, and table reservations.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
