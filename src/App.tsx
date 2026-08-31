@@ -12,8 +12,9 @@ import { MenuModal } from './components/MenuModal';
 import { LightboxModal } from './components/LightboxModal';
 import { GALLERY_PHOTOS } from './data/gallery';
 import { GalleryPhoto } from './types';
-import { Phone, Calendar } from 'lucide-react';
+import { Phone, Calendar, MessageCircle } from 'lucide-react';
 import { RESTAURANT_INFO } from './data/restaurantInfo';
+import { FloatingWhatsApp } from './components/FloatingWhatsApp';
 
 export default function App() {
   const [reservationModalOpen, setReservationModalOpen] = useState(false);
@@ -73,19 +74,31 @@ export default function App() {
       {/* Footer */}
       <Footer />
 
+      {/* Floating WhatsApp Action for Desktop */}
+      <FloatingWhatsApp />
+
       {/* Floating Quick Action Pill for Mobile */}
-      <div className="fixed bottom-4 left-4 right-4 z-30 md:hidden">
-        <div className="bg-stone-900/95 backdrop-blur-md border border-stone-700/80 rounded-2xl p-2 shadow-2xl flex items-center justify-between gap-2">
+      <div className="fixed bottom-3 left-3 right-3 z-30 md:hidden">
+        <div className="bg-stone-900/95 backdrop-blur-md border border-stone-700/80 rounded-2xl p-2 shadow-2xl flex items-center justify-between gap-1.5">
           <a
             href={RESTAURANT_INFO.phoneTel}
-            className="flex-1 py-2.5 px-3 rounded-xl bg-stone-800 text-stone-200 text-xs font-medium flex items-center justify-center gap-1.5 active:scale-95 transition-transform"
+            className="flex-1 py-2 px-2 rounded-xl bg-stone-800 text-stone-200 text-xs font-medium flex items-center justify-center gap-1 active:scale-95 transition-transform"
           >
             <Phone className="w-3.5 h-3.5 text-[#C28E58]" />
             <span>Call</span>
           </a>
+          <a
+            href={RESTAURANT_INFO.whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex-1 py-2 px-2 rounded-xl bg-[#25D366] text-white text-xs font-semibold flex items-center justify-center gap-1 active:scale-95 transition-transform shadow-sm"
+          >
+            <MessageCircle className="w-3.5 h-3.5 fill-current text-white stroke-none" />
+            <span>WhatsApp</span>
+          </a>
           <button
             onClick={handleOpenReservation}
-            className="flex-1 py-2.5 px-3 rounded-xl bg-[#C28E58] text-stone-950 text-xs font-bold flex items-center justify-center gap-1.5 active:scale-95 transition-transform shadow-md cursor-pointer"
+            className="flex-1 py-2 px-2 rounded-xl bg-[#C28E58] text-stone-950 text-xs font-bold flex items-center justify-center gap-1 active:scale-95 transition-transform shadow-md cursor-pointer"
           >
             <Calendar className="w-3.5 h-3.5" />
             <span>Book Table</span>

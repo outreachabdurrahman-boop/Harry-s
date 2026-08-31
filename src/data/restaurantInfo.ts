@@ -7,6 +7,8 @@ export const RESTAURANT_INFO = {
   phone: "0331 9146686",
   phoneTel: "tel:+923319146686",
   phoneDisplay: "+92 331 9146686",
+  whatsappUrl: "https://wa.me/923319146686?text=Hello%20Harry's%20Islamabad,%20I%20would%20like%20to%20inquire%20about%20a%20reservation%20or%20menu.",
+  whatsappNumber: "+92 331 9146686",
   email: "harryspatio@gmail.com",
   facebookUrl: "https://www.facebook.com/isb.harrys",
   googleMapsUrl: "https://maps.google.com/?q=F-10+Markaz,+F-10/3,+Islamabad,+44000,+Pakistan",

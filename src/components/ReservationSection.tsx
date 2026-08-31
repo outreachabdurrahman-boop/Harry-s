@@ -1,5 +1,5 @@
 import React from 'react';
-import { Phone, MapPin, Mail, Navigation, Clock, Calendar, ExternalLink } from 'lucide-react';
+import { Phone, MapPin, Mail, Navigation, Clock, Calendar, ExternalLink, MessageCircle } from 'lucide-react';
 import { RESTAURANT_INFO } from '../data/restaurantInfo';
 
 // Facebook Icon SVG
@@ -57,14 +57,25 @@ export const ReservationSection: React.FC<ReservationSectionProps> = ({
             </p>
 
             {/* Main Action Buttons */}
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full max-w-md mb-8">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3.5 w-full max-w-xl mb-8">
               <a
                 id="call-to-reserve-btn"
                 href={RESTAURANT_INFO.phoneTel}
-                className="w-full sm:w-auto px-8 py-4 rounded-full bg-[#C28E58] hover:bg-[#a87442] text-stone-950 font-bold text-sm sm:text-base tracking-wide transition-all shadow-lg shadow-[#C28E58]/20 hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2.5"
+                className="w-full sm:w-auto px-7 py-3.5 rounded-full bg-[#C28E58] hover:bg-[#a87442] text-stone-950 font-bold text-sm tracking-wide transition-all shadow-lg shadow-[#C28E58]/20 hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2"
               >
                 <Phone className="w-4 h-4 text-stone-950" />
-                <span>Call to Reserve</span>
+                <span>Call {RESTAURANT_INFO.phone}</span>
+              </a>
+
+              <a
+                id="whatsapp-reserve-btn"
+                href={RESTAURANT_INFO.whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto px-7 py-3.5 rounded-full bg-[#25D366] hover:bg-[#20ba59] text-white font-bold text-sm tracking-wide transition-all shadow-lg shadow-green-900/30 hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2"
+              >
+                <MessageCircle className="w-4 h-4 fill-current text-white stroke-none" />
+                <span>WhatsApp Us</span>
               </a>
 
               <a
@@ -72,7 +83,7 @@ export const ReservationSection: React.FC<ReservationSectionProps> = ({
                 href={RESTAURANT_INFO.googleMapsUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto px-8 py-4 rounded-full bg-stone-800 hover:bg-stone-700 text-stone-100 border border-stone-600 font-medium text-sm sm:text-base tracking-wide transition-all flex items-center justify-center gap-2.5"
+                className="w-full sm:w-auto px-7 py-3.5 rounded-full bg-stone-800 hover:bg-stone-700 text-stone-100 border border-stone-600 font-medium text-sm tracking-wide transition-all flex items-center justify-center gap-2"
               >
                 <Navigation className="w-4 h-4 text-[#C28E58]" />
                 <span>Get Directions</span>
